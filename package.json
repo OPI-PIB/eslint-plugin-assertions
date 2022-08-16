@@ -1,0 +1,29 @@
+{
+	"name": "@opi-pib/eslint-plugin-assertions",
+	"version": "1.0.0",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"build": "tsc",
+		"test": "jest --detectOpenHandles"
+	},
+	"files": [
+		"dist"
+	],
+	"author": "Dawid Lubowiecki",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/eslint": "^8.4.5",
+		"@types/node": "^18.7.5",
+		"eslint": "^8.22.0",
+		"jest": "^28.1.3",
+		"ts-jest": "^28.0.8",
+		"typescript": "^4.7.4"
+	},
+	"dependencies": {
+		"randexp": "^0.5.3"
+	},
+	"peerDependencies": {
+		"eslint": "^8.22.0"
+	}
+}
