@@ -5,7 +5,7 @@ import { assertionCode } from './assertion-code';
 const ruleTester = new RuleTester({});
 
 ruleTester.run(
-	'@opi-pib/assertions/assertions-code',
+	'@opi_pib/assertions/assertions-code',
 	assertionCode,
 	{
 		valid: [
