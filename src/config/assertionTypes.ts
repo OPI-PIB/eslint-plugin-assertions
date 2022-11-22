@@ -1,1 +1,1 @@
-export const AssertionTypes = ['always', 'never'];
+export const AssertionTypes = ['always', 'never'] as const;
