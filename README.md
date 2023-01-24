@@ -2,17 +2,10 @@
 
 ## Dependencies
 
-### Install dependencies
+### Install
 
 ```
-npm install -D @opi_pib/eslint-plugin-assertions
-```
-
-### Install peerDependencies
-
-```
-npm install -D eslint
-
+npm install -D eslint @opi_pib/eslint-plugin-assertions
 ```
 
 ## Config
