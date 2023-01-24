@@ -1,8 +1,6 @@
 # @opi_pib/eslint-plugin-assertions
 
-## Dependencies
-
-### Install
+## Install
 
 ```
 npm install -D eslint @opi_pib/eslint-plugin-assertions
