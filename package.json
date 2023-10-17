@@ -1,10 +1,10 @@
 {
 	"name": "@opi_pib/eslint-plugin-assertions",
-	"version": "1.0.11",
+	"version": "1.0.12",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"scripts": {
-		"compile": "tsc",
+		"build": "tsc",
 		"test": "jest --detectOpenHandles"
 	},
 	"files": [
