@@ -1,6 +1,6 @@
 import { RuleTester } from 'eslint';
 
-import { assertionCondition } from './assertion-condition';
+import { assertionCondition } from './assertion-condition.mjs';
 
 const ruleTester = new RuleTester();
 

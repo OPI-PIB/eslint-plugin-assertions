@@ -1,7 +1,7 @@
 import { Rule } from 'eslint';
 import RandExp from 'randexp';
 
-import { AssertionTypes } from '../config/assertionTypes';
+import { AssertionTypes } from '../config/assertionTypes.mjs';
 
 export const assertionCode: Rule.RuleModule = {
 	meta: {

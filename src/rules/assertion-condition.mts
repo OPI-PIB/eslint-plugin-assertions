@@ -1,6 +1,6 @@
 import { Rule } from 'eslint';
 
-import { AssertionTypes } from '../config/assertionTypes';
+import { AssertionTypes } from '../config/assertionTypes.mjs';
 
 export const assertionCondition: Rule.RuleModule = {
 	meta: {
