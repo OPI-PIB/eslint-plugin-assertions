@@ -1,5 +1,5 @@
 import { RuleTester } from 'eslint';
-import { assertionCode } from './assertion-code';
+import { assertionCode } from './assertion-code.mjs';
 
 const ruleTester = new RuleTester();
 
