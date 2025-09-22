@@ -9,22 +9,22 @@ export const assertionCode: Rule.RuleModule = {
 		fixable: 'code',
 		docs: {
 			category: 'Assertions',
-			description: 'Checks if always() and never() code match a pattern.',
+			description: 'Checks if always() and never() code match a pattern.'
 		},
 		messages: {
 			codeEmpty: 'Assertion code is empty',
-			codePatternMismatch: 'Assertion code do not match pattern',
+			codePatternMismatch: 'Assertion code do not match pattern'
 		},
 		schema: {
 			type: 'array',
 			items: {
 				oneOf: [
 					{
-						type: 'string',
-					},
-				],
-			},
-		},
+						type: 'string'
+					}
+				]
+			}
+		}
 	},
 	create: (context) => {
 		return {
@@ -41,40 +41,25 @@ export const assertionCode: Rule.RuleModule = {
 								node: node,
 								messageId: 'codeEmpty',
 								fix(fixer) {
-									return fixCode(
-										fixer,
-										codePattern,
-										codeArgument.range
-									);
-								},
+									return fixCode(fixer, codePattern, codeArgument.range);
+								}
 							});
-						} else if (
-							codePattern != null &&
-							!code.match(codePattern)
-						) {
+						} else if (codePattern != null && !code.match(codePattern)) {
 							context.report({
 								node: node,
 								messageId: 'codePatternMismatch',
 								fix(fixer) {
-									return fixCode(
-										fixer,
-										codePattern,
-										codeArgument.range
-									);
-								},
+									return fixCode(fixer, codePattern, codeArgument.range);
+								}
 							});
 						}
 					}
 				}
-			},
+			}
 		};
-	},
+	}
 };
 
-function fixCode(
-	fixer: Rule.RuleFixer,
-	pattern: string,
-	range: [number, number] = [0, 0]
-): Rule.Fix {
+function fixCode(fixer: Rule.RuleFixer, pattern: string, range: [number, number] = [0, 0]): Rule.Fix {
 	return fixer.replaceTextRange(range, `'${new RandExp(pattern).gen()}'`);
 }

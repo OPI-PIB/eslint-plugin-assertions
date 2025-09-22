@@ -4,6 +4,6 @@ import { assertionCondition } from './rules/assertion-condition';
 export = {
 	rules: {
 		'assertions-code': assertionCode,
-		'assertions-condition': assertionCondition,
-	},
+		'assertions-condition': assertionCondition
+	}
 };

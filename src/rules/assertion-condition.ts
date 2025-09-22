@@ -9,12 +9,12 @@ export const assertionCondition: Rule.RuleModule = {
 		docs: {
 			category: 'Assertions',
 			description:
-				'Disallowing passing explicit boolean true or false to the assert() method reduces the amount of false-positives.',
+				'Disallowing passing explicit boolean true or false to the assert() method reduces the amount of false-positives.'
 		},
 		messages: {
 			assertionNoCondition: "Assertion condition can't be empty",
-			assertionBooleanType: "Assertion condition can't be boolean",
-		},
+			assertionBooleanType: "Assertion condition can't be boolean"
+		}
 	},
 	create: (context) => {
 		return {
@@ -25,16 +25,16 @@ export const assertionCondition: Rule.RuleModule = {
 					if (conditionArgument == null) {
 						context.report({
 							node: node,
-							messageId: 'assertionNoCondition',
+							messageId: 'assertionNoCondition'
 						});
 					} else if (conditionArgument.type === 'Literal') {
 						context.report({
 							node: node,
-							messageId: 'assertionBooleanType',
+							messageId: 'assertionBooleanType'
 						});
 					}
 				}
-			},
+			}
 		};
-	},
+	}
 };
