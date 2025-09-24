@@ -1,6 +1,6 @@
 {
 	"name": "@opi_pib/eslint-plugin-assertions",
-	"version": "9.2.4",
+	"version": "9.2.5",
 	"type": "module",
 	"main": "dist/index.mjs",
 	"types": "dist/index.d.mts",
@@ -14,9 +14,12 @@
 		"npm": ">=10.8.0"
 	},
 	"scripts": {
+		"prepare": "husky",
 		"build": "tsc",
-		"test": "vitest --run",
-		"lint:prettier": "prettier --write ."
+		"test": "vitest --run"
+	},
+	"lint-staged": {
+		"*": "prettier -u -w"
 	},
 	"prettier": "@opi_pib/prettier-config-base",
 	"author": "Dawid Lubowiecki",
@@ -26,6 +29,8 @@
 		"@types/eslint": "^9.0.0",
 		"@types/node": "^24.0.0",
 		"eslint": "^9.0.0",
+		"husky": "^9.1.7",
+		"lint-staged": "^16.2.0",
 		"typescript": "^5.0.0",
 		"vitest": "^3.0.0"
 	},
